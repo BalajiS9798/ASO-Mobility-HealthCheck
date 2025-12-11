@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobility Health Check Console</title>
+    <style>
+        /* Base styles and background matching the screenshot */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            /* Dark background with a slight gradient glow for the screenshot effect */
+            background: #1a1a2e; 
+            background: linear-gradient(135deg, #1f1c2c 0%, #000000 100%);
+            color: #e0e0e0;
+            overflow: hidden; /* Keeps the glow contained */
+        }
+        
+        /* Container for the Glassmorphism effect */
+        .container {
+            background: rgba(255, 255, 255, 0.05); /* Very light transparent white background */
+            backdrop-filter: blur(10px); /* The key Glassmorphism blur effect */
+            -webkit-backdrop-filter: blur(10px); /* Safari support */
+            padding: 40px 50px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Dark shadow for depth */
+            text-align: center;
+            width: 300px;
+        }
+
+        /* Titles and subtitles */
+        h1 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        p {
+            color: #b0b0b0;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        /* Button group layout */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Styling for the individual buttons */
+        .button-group button {
+            /* Button background and border matching the screenshot */
+            background-color: transparent;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: 1px solid rgba(135, 206, 250, 0.5); /* Light blue subtle border */
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            
+            /* Inner glow effect for buttons */
+            box-shadow: 0 0 10px rgba(135, 206, 250, 0.2); 
+        }
+
+        /* Hover effect for interaction */
+        .button-group button:hover {
+            background-color: rgba(135, 206, 250, 0.1); /* Subtle light blue fill on hover */
+            border-color: rgba(135, 206, 250, 0.8);
+            box-shadow: 0 0 15px rgba(135, 206, 250, 0.5); /* Stronger glow on hover */
+            transform: translateY(-2px); /* Slight lift */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mobility Health Check</h1>
+        <p>Select a system to view its status</p>
+        <div class="button-group">
+            <button onclick="window.location.href='mqt_Check1.html'">MQT Health Check</button>
+            <button onclick="window.location.href='sim_Check1.html'">SIM Health Check</button>
+            <button onclick="window.location.href='clarity_Check1.html'">Clarity Health Check</button>
+        </div>
+    </div>
+</body>
+</html>
